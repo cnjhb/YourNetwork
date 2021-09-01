@@ -8,6 +8,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.withTimeoutOrNull
 import org.json.JSONObject
+import java.net.ConnectException
 import kotlin.concurrent.thread
 import kotlin.coroutines.resume
 
@@ -35,7 +36,9 @@ class MainViewModel : ViewModel() {
             val data = withTimeoutOrNull(3000) {
                 return@withTimeoutOrNull suspendCancellableCoroutine<String> {
                     thread {
-                        it.resume(sendGet(loginUrl))
+                        try {
+                            it.resume(sendGet(loginUrl))
+                        }catch (ignore:ConnectException){}
                     }
                 }
             }
