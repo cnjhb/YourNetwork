@@ -31,7 +31,7 @@ class MainViewModel : ViewModel() {
         }
         logging.set(true)
         val json_regex = Regex("[{].+[}]")
-        var loginUrl = getLoginUrl(account_number, account_password, account_type, pc_mode)
+        val loginUrl = getLoginUrl(account_number, account_password, account_type, pc_mode)
         viewModelScope.launch {
             val data = withTimeoutOrNull(3000) {
                 return@withTimeoutOrNull suspendCancellableCoroutine<String> {
@@ -49,7 +49,7 @@ class MainViewModel : ViewModel() {
                     when (json.getInt("result")) {
                         1 -> Result.Success
                         else -> {
-                            var msga = json.getString("msga")
+                            val msga = json.getString("msga")
                             when {
                                 msga.contains("pc") -> Result.InusePC
                                 msga.contains("mobile") -> Result.InuseMobile
