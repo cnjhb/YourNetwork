@@ -18,7 +18,7 @@
     <string name="undefined">undefined</string>
     <string name="telecom">telecom</string>
     <string name="campus">campus</string>
-    <string name="project_address" translatable="false">https://www.baidu.com</string>
+    <string name="project_address" translatable="false">https://github.com/cnjhb/YourNetwork</string>
     <string name="copy">copy</string>
     <string name="copied">copied</string>
     <string name="time_out">time out</string>
