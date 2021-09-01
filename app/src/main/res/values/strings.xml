@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">YourNetwork</string>
+    <string name="about">about</string>
+    <string name="account_number">account number</string>
+    <string name="account_password">account password</string>
+    <string name="login">login</string>
+    <string name="save_password">save password</string>
+    <string name="pc_mode">pc mode</string>
+    <string name="prefs_account_number" translatable="false">SHARED_PREFS_ACCOUNT_NUMBER</string>
+    <string name="prefs_account_password" translatable="false">SHARED_PREFS_ACCOUNT_PASSWORD</string>
+    <string name="prefs_account_type" translatable="false">SHARED_PREFS_ACCOUNT_TYPE</string>
+    <string name="prefs_save_password" translatable="false">SHARED_PREFS_SAVE_PASSWORD</string>
+    <string name="prefs_pc_mode" translatable="false">SHARED_PREFS_PC_MODE</string>
+    <string name="login_success">login successful</string>
+    <string name="inuse_pc">inuse pc</string>
+    <string name="inuse_mobile">inuse mobile</string>
+    <string name="input_incomplete">input incomplete</string>
+    <string name="undefined">undefined</string>
+    <string name="telecom">telecom</string>
+    <string name="campus">campus</string>
+    <string name="project_address" translatable="false">https://www.baidu.com</string>
+    <string name="copy">copy</string>
+    <string name="copied">copied</string>
+    <string name="time_out">time out</string>
+</resources>

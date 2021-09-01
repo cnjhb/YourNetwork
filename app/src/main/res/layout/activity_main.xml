@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+    <data>
+        <import type="asia.jhb.yournetwork.Util"/>
+        <variable name="viewmodel" type="asia.jhb.yournetwork.MainViewModel"/>
+    </data>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:padding="10dp"
+                      android:orientation="vertical">
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:hint="@string/account_number"
+                      android:text="@={viewmodel.account_number}"
+                      android:id="@+id/account_number"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:text="@={viewmodel.account_password}"
+                      android:hint="@string/account_password" android:id="@+id/account_password"/>
+            <Spinner android:layout_width="match_parent" android:layout_height="wrap_content"
+                     android:spinnerMode="dialog"
+                     android:entries="@array/spinner_types"
+                     app:selection="@={viewmodel.spinnerSelection}"
+                     android:id="@+id/account_type"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:checked="@={viewmodel.save_password}"
+                      android:text="@string/save_password"
+                      android:id="@+id/save_password"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:checked="@={viewmodel.pc_mode}"
+                      android:text="@string/pc_mode" android:id="@+id/pc_mode"/>
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    android:enabled="@{!viewmodel.logging}"
+                    android:onClick="@{() -> viewmodel.login(context)}"
+                    android:layout_gravity="center_horizontal" android:id="@+id/login"/>
+        </LinearLayout>
+</layout>

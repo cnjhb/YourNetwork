@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">YourNetwork</string>
+    <string name="about">关于</string>
+    <string name="account_number">帐号</string>
+    <string name="account_password">密码</string>
+    <string name="login">登录</string>
+    <string name="save_password">保存密码</string>
+    <string name="pc_mode">pc模式</string>
+    <string name="login_success">登录成功</string>
+    <string name="inuse_pc">已有pc使用</string>
+    <string name="inuse_mobile">已有手机使用</string>
+    <string name="input_incomplete">输入不完全</string>
+    <string name="undefined">未定义</string>
+    <string name="telecom">电信</string>
+    <string name="campus">校园网</string>
+    <string name="copy">复制</string>
+    <string name="copied">已复制</string>
+    <string name="time_out">连接超时</string>
+</resources>
